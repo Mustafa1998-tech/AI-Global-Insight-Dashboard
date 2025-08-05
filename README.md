@@ -70,6 +70,59 @@ streamlit run app.py
 
 Then open your browser and navigate to `http://localhost:8501`
 
+## 🚀 Deployment | النشر
+
+### Deploying to Streamlit Cloud
+
+1. **Create a GitHub repository** (if you haven't already)
+   - Go to [GitHub](https://github.com/new)
+   - Create a new repository named `AI-Global-Insight-Dashboard`
+   - Don't initialize it with a README (you already have one)
+
+2. **Push your code to GitHub**
+   ```bash
+   git init
+   git add .
+   git commit -m "Initial commit"
+   git branch -M main
+   git remote add origin https://github.com/yourusername/AI-Global-Insight-Dashboard.git
+   git push -u origin main
+   ```
+
+3. **Deploy to Streamlit Cloud**
+   - Go to [Streamlit Cloud](https://share.streamlit.io/)
+   - Click "New app"
+   - Select your repository and branch
+   - Set the main file path to `app.py`
+   - Click "Deploy!"
+
+### Local Testing Before Deployment
+
+Make sure to test your app locally before deploying:
+
+1. Create a virtual environment:
+   ```bash
+   python -m venv venv
+   source venv/bin/activate  # On Windows: venv\Scripts\activate
+   ```
+
+2. Install dependencies:
+   ```bash
+   pip install -r requirements.txt
+   ```
+
+3. Run the app locally:
+   ```bash
+   streamlit run app.py
+   ```
+
+### Environment Variables (if needed)
+
+If your app requires any environment variables (like API keys), you can add them in Streamlit Cloud's settings:
+1. Go to your app on Streamlit Cloud
+2. Click "Advanced settings"
+3. Add your environment variables under "Secrets"
+
 ## 📊 Data | البيانات
 
 The dashboard uses a CSV file (`ai_data.csv`) containing the following columns:
